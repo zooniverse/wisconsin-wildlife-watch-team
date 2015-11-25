@@ -1,4 +1,6 @@
 import React from 'react';
+import Tabs from './Tabs';
+import Content from './Content';
 
 export default React.createClass({
   getInitialState() {
@@ -14,7 +16,13 @@ export default React.createClass({
   render() {
     return (
       <div className="secondary-bg">
-        <h1>Main is working-ish</h1>
+        <Tabs
+          currentTab={this.state.currentTab}
+          changeTab={this.changeTab}
+        />
+        <Content
+          currentTab={this.state.currentTab}
+        />
       </div>
     );
   }
