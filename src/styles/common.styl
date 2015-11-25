@@ -1,0 +1,147 @@
+$light-blue = #afe0ee;
+$medium-blue = #2099de;
+$dark-blue = #213742;
+$red = #ee4737;
+$white = #ffffff;
+$dark-grey-font = #505050;
+$medium-grey-font = #777777
+$light-grey-bg = #eaeaea;
+
+$subject-width = 580
+$subject-height = 427
+
+$black = #140b03;
+$blue =  #00688B;
+$red-dark = #7c011c;
+
+$green = #525b46;
+$green-light = #85937a;
+$green-medium = #054B29
+$green-dark = #2b2e27;
+$green-really = #490; // TODO
+$green-background = #6A9776
+
+$gray = #dcdcdc;
+$brown = #813e1e;
+$gold = #fc0; // TODO
+$mango = #FF8C40
+
+// media queries
+media-query-max(screenSize)
+  "screen and (max-width: " + screenSize + ")"
+
+media-query-min(screenSize)
+  "screen and (min-width: " + screenSize + ")"
+
+$mobile-width = 520px
+$phone-or-smaller = media-query-max($mobile-width)
+$phone-or-larger = media-query-min($mobile-width)
+
+$tablet-width = 820px
+$tablet-or-smaller = media-query-max($tablet-width)
+$tablet-or-larger = media-query-min($tablet-width)
+
+$desktop-width = 1100px
+$desktop-or-smaller = media-query-max($desktop-width)
+$desktop-or-larger = media-query-min($desktop-width)
+
+// width at which classifier stacks vertically
+$classifier-vertical-stack-breakpoint = media-query-max(1020px)
+
+// width at which classifier expands across screen
+$classifier-full-width-breakpoint = media-query-max(680px)
+
+centerFixed(w)
+  width: unit(w, 'px');
+  margin-left: unit(-(w / 2), 'px');
+
+#paper-stripe
+  &:before
+    border: 1px solid $gray;
+    border-width: 1px 0;
+    content: " ";
+    height: 2px;
+    left: 0;
+    position: absolute
+    top: 10px;
+    width: 100%;
+
+#standard-button
+  background: #f60;
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: $gray;
+  display: inline-block;
+  font: inherit;
+  padding: 3px 8px 3px 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+
+  &:hover
+    border-color: $black;
+
+  &:active
+    opacity: 0.75;
+
+  &:disabled,
+  &.disabled
+    opacity: 0.5;
+
+wrap(sectionWidth)
+  max-width sectionWidth
+  margin 0 auto
+
+.classifier-action-button
+  @extend #standard-button
+  line-height: 12px;
+  height: 30px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $white;
+  letter-spacing: 1px;
+  width: 120px;
+  background: $green-dark;
+  text-transform: uppercase;
+
+.light-grey-btn
+  color: $dark-grey-font;
+  background-color: $light-grey-bg;
+
+#standard-toggle
+  color: transparent;
+  height: 20px;
+  position: relative;
+  text-shadow: none;
+  width: 20px;
+
+  &:before
+    background: $light-grey-bg
+    border-radius: 50%;
+    content: ' ';
+    height: 10px;
+    left: 50%;
+    margin: -5px 0 0 -5px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+
+  &.active:after
+    background: $green-light;
+    border-radius: 50%;
+    content: ' ';
+    height: 10px;
+    left: 50%;
+    margin: -5px 0 0 -5px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+
+.center
+  margin: 0 auto
+  text-align: center
+
+img
+  border: 0

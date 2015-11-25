@@ -21,7 +21,7 @@ export default React.createClass({
           }
 
           {this.props.currentTab == 2 ?
-            <div>
+            <div className="content">
               <h2>Participating Organizations</h2>
               {teamTabs[1].content.map(function(item, index) {
                 return (
@@ -33,7 +33,7 @@ export default React.createClass({
           }
 
           {this.props.currentTab == 3 ?
-            <div>
+            <div className="content">
               <h2>Image Credits</h2>
               {teamTabs[2].content.map(function(item, index) {
                 return (

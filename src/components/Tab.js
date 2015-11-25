@@ -9,7 +9,7 @@ export default React.createClass({
   render() {
     return (
       <button onClick={this.handleClick} className={this.props.isCurrent ? 'active' : null}>
-        {this.props.name}
+        <span>{this.props.name}</span>
       </button>
     );
   }
