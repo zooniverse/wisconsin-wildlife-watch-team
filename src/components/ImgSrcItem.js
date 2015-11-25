@@ -5,7 +5,7 @@ export default React.createClass({
     return (
       <figure>
         <img src={this.props.item.imgSrc}/>
-        <p className="imgSrcDescription">{this.props.item.description}</p>
+        <figcaption className="imgSrcDescription">{this.props.item.description}</figcaption>
       </figure>
     );
   }

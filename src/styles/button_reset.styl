@@ -1,0 +1,28 @@
+button
+  appearance: none;
+  background: transparent;
+  border: 0;
+  box-sizing: content-box;
+  display: inline-block;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: inherit;
+  text-shadow: inherit;
+  vertical-align: baseline;
+  width: auto;
+
+  &::-moz-focus-inner
+    border: 0;
+    outline: none;
+    padding: 0;
+
+  &:focus
+    outline: none;
+
+  &:disabled
+    cursor: default;
+    pointer-events: none;

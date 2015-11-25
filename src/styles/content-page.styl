@@ -10,6 +10,8 @@
   h1
     line-height 150px
     font-size 40px
+  img
+    max-height 150px
 
 .secondary-bg
   background-color $white
@@ -87,36 +89,10 @@
     a
       text-decoration underline
 
-    .left-column, .right-column
-      float left
-
     .left-column
-      width 66%
+      float left
       .content
         padding-right 30px
-
-    .right-column
-      width 33%
-      color $medium-grey-font
-
-      button
-        width 100%
-        margin 20px 0
-        height 60px
-        font-size 14px
-        border-radius 5px
-        text-transform uppercase
-        font-weight 800
-        letter-spacing 2px
-        color #fff
-        text-align center
-        background-color $green
-
-        &:active
-          position relative
-          top 1px
-        &:hover
-          background-color lighten($green-light, 10%)
 
     .sub-nav
       line-height: 50px
