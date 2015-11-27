@@ -11,7 +11,7 @@ export default React.createClass({
     return (
       <div className="secondary-content">
         <div className="sub-nav">
-          {Data.teamTabs.map(function(tab, index) {
+          {Data.teamTabs.map( (tab, index) => {
             return (
               <Tab
                 handleClick={this.handleClick.bind(this, tab)}

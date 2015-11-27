@@ -2,7 +2,6 @@ import React from 'react';
 
 export default React.createClass({
   handleClick(e) {
-    e.preventDefault();
     this.props.handleClick();
   },
 
