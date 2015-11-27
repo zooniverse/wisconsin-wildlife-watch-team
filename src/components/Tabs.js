@@ -1,4 +1,5 @@
 import React from 'react';
+import Data from './Data';
 import Tab from './Tab';
 
 export default React.createClass({
@@ -10,7 +11,7 @@ export default React.createClass({
     return (
       <div className="secondary-content">
         <div className="sub-nav">
-          {teamTabs.map(function(tab, index) {
+          {Data.teamTabs.map(function(tab, index) {
             return (
               <Tab
                 handleClick={this.handleClick.bind(this, tab)}
@@ -25,9 +26,3 @@ export default React.createClass({
     );
   }
 });
-
-var teamTabs = [
-  {id: 1, title: "People"},
-  {id: 2, title: "Organizations"},
-  {id: 3, title: "Image Credits"}
-];
