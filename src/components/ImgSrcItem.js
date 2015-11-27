@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default React.createClass({
-  render: () => {
+  render() {
     return (
       <figure>
         <img src={this.props.item.imgSrc}/>

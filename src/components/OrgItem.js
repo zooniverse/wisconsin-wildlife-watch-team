@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default React.createClass({
-  render: () => {
+  render() {
     return (
       <div className="team-member">
         <h3>{this.props.item.name}</h3>
