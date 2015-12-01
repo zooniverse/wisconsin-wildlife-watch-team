@@ -35,9 +35,9 @@ var Data = {
   ],
 
   teamTabs: [
-    {id: 1, title: "People"},
-    {id: 2, title: "Organizations"},
-    {id: 3, title: "Image Credits"}
+    {id: 1, title: "People", heading: "The Wildlife Watch Team"},
+    {id: 2, title: "Organizations", heading: "Participating Organizations"},
+    {id: 3, title: "Image Credits", heading: "Image Credits"}
   ]
 
 };

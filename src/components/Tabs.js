@@ -13,12 +13,9 @@ export default React.createClass({
         <div className="sub-nav">
           {Data.teamTabs.map( (tab, index) => {
             return (
-              <Tab
-                handleClick={this.handleClick.bind(this, tab)}
-                key={index}
-                name={tab.title}
-                isCurrent={(this.props.currentTab === tab.id)}
-              />
+              <button key={index} onClick={this.handleClick.bind(this, tab)} className={(this.props.currentTab === tab.id) ? 'active' : null}>
+                <span>{tab.title}</span>
+              </button>
             );
           }.bind(this))}
         </div>
