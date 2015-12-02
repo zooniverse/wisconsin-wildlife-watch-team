@@ -12,7 +12,7 @@ export default React.createClass({
         <div className="sub-nav">
           {Data.teamTabs.map( (tab, index) => {
             return (
-              <button key={index} onClick={this.handleClick.bind(this, tab)} className={(this.props.currentTab === tab.id) ? 'active' : null}>
+              <button type="button" key={index} onClick={this.handleClick.bind(this, tab)} className={(this.props.currentTab === tab.id) ? 'active' : null}>
                 <span>{tab.title}</span>
               </button>
             );

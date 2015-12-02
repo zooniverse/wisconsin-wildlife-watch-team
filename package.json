@@ -22,7 +22,10 @@
   ],
   "scripts": {
     "start": "gulp watch",
-    "test": "mocha --reporter nyan --compilers js:babel/register --recursive"
+    "deploy-to-staging": "",
+    "deploy-to-beta": "",
+    "deploy-to-production": "",
+    "deploy": ""
   },
   "author": "Maurizio Mangione",
   "license": "MIT",
@@ -31,6 +34,7 @@
   },
   "homepage": "https://github.com/Granze/react-starterify",
   "dependencies": {
+    "publisssh": "0.2.6",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3"
@@ -54,9 +58,6 @@
     "gulp-stylus": "^2.1.0",
     "gulp-uglify": "^1.4.0",
     "mocha": "^2.3.0",
-    "postcss-nested": "^1.0.0",
-    "postcss-simple-extend": "^1.0.0",
-    "postcss-simple-vars": "^1.0.0",
     "react-tools": "^0.13.3",
     "rimraf": "^2.4.3",
     "run-sequence": "^1.1.2",
