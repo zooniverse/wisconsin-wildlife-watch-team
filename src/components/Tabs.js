@@ -1,6 +1,5 @@
 import React from 'react';
 import Data from './Data';
-import Tab from './Tab';
 
 export default React.createClass({
   handleClick(tab) {
