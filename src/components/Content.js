@@ -6,7 +6,6 @@ import ImgSrcItem from './ImgSrcItem';
 export default React.createClass({
   render() {
     return (
-      <div className="secondary-content">
         <div className="left-column">
           {this.props.currentTab == 1 ?
             <div className="content">
@@ -44,7 +43,6 @@ export default React.createClass({
             :null
           }
 
-        </div>
       </div>
     )
   }

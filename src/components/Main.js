@@ -15,10 +15,11 @@ export default React.createClass({
 
   render() {
     return (
-      <div className="secondary-bg">
+      <div className="secondary-content">
         <Tabs
           currentTab={this.state.currentTab}
           changeTab={this.changeTab}
+          className="secondary-content"
         />
         <Content
           currentTab={this.state.currentTab}

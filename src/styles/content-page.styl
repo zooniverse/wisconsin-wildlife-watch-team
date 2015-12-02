@@ -1,15 +1,26 @@
 @import "common"
 
 .secondary-header
-  margin 0 auto
-  max-width 1090px
+  margin 0
   height 150px
-  font-size 20px
-  color #fff
-  padding 0 5vw
+
+  background -webkit-linear-gradient(left top, #0e4b84 , #5d6e7e) /* For Safari 5.1 to 6.0 */
+  background -o-linear-gradient(bottom right, #0e4b84 , #5d6e7e) /* For Opera 11.1 to 12.0 */
+  background -moz-linear-gradient(bottom right, #0e4b84 , #5d6e7e) /* For Firefox 3.6 to 15 */
+  background linear-gradient(to bottom right, #0e4b84 , #5d6e7e) /* Standard syntax (must be last) */
+
   h1
-    line-height 150px
-    font-size 40px
+    display block
+    margin 0 auto
+    max-width 1090px
+    max-height 150px
+    padding 0 5vw 0 5vw
+  a
+    vertical-align middle
+    &:link
+      text-decoration none
+    &:visited
+      color #fff
   img
     max-height 150px
 

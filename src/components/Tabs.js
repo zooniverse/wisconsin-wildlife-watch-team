@@ -8,8 +8,7 @@ export default React.createClass({
 
   render() {
     return (
-      <div className="secondary-content">
-        <div className="sub-nav">
+        <nav className="sub-nav">
           {Data.teamTabs.map( (tab, index) => {
             return (
               <button type="button" key={index} onClick={this.handleClick.bind(this, tab)} className={(this.props.currentTab === tab.id) ? 'active' : null}>
@@ -17,8 +16,7 @@ export default React.createClass({
               </button>
             );
           }.bind(this))}
-        </div>
-      </div>
+        </nav>
     );
   }
 });
