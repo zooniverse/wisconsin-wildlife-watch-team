@@ -12,12 +12,10 @@ import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
 import stylus from 'gulp-stylus';
-
-import nib from 'nib';
-
 import htmlReplace from 'gulp-html-replace';
 import imagemin from 'gulp-imagemin';
 import runSequence from 'run-sequence';
+import nib from 'nib';
 
 const paths = {
   bundle: 'app.js',
@@ -73,9 +71,7 @@ gulp.task('browserify', () => {
 gulp.task('styles', () => {
   gulp.src(paths.srcCss)
     .pipe(stylus({
-
       use: nib()
-
     }))
     .pipe(gulp.dest(paths.dist));
 });
