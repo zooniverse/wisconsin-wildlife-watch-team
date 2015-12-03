@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "deploy-to-staging": "gulp build && publisssh ./public/build preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
+    "deploy-to-staging": "gulp build && publisssh ./public preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
     "deploy-to-production": "",
     "deploy": ""
   },

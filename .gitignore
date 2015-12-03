@@ -1,5 +1,9 @@
 node_modules
-.tmp
-.idea
-public
+
+public/images
+public/js
+public/styles
+
 .DS_Store
+.idea
+.tmp
