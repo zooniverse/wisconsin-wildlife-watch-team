@@ -1,5 +1,5 @@
 {
-  "name": "USA Wildlife Watch Team Page",
+  "name": "usa-wildlife-watch-team",
   "version": "1.0.0",
   "description": "Team-Organization-Image_Source Page for USA Wildlife Watch",
   "main": "app.js",
@@ -9,8 +9,7 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "deploy-to-staging": "",
-    "deploy-to-beta": "",
+    "deploy-to-staging": "gulp build && publisssh ./public/build preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
     "deploy-to-production": "",
     "deploy": ""
   },
@@ -21,7 +20,6 @@
   },
   "homepage": "",
   "dependencies": {
-    "publisssh": "0.2.6",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
     "react-router": "^1.0.0-rc3"
@@ -46,6 +44,7 @@
     "gulp-uglify": "^1.4.0",
     "mocha": "^2.3.0",
     "nib": "~1.1.0",
+    "publisssh": "^1.0.1",
     "react-tools": "^0.13.3",
     "rimraf": "^2.4.3",
     "run-sequence": "^1.1.2",

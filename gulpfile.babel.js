@@ -22,19 +22,19 @@ const paths = {
   srcJsx: 'src/Index.js',
   srcCss: 'src/**/*.styl',
   srcImg: 'src/images/**',
-  dist: 'dist',
-  distJs: 'dist/js',
-  distImg: 'dist/images'
+  dest: 'public',
+  destJs: 'public/js',
+  destImg: 'public/images'
 };
 
 gulp.task('clean', cb => {
-  rimraf('dist', cb);
+  rimraf('./public/*/*', cb);
 });
 
 gulp.task('browserSync', () => {
   browserSync({
     server: {
-      baseDir: './'
+      baseDir: './public/'
     }
   });
 });
@@ -47,7 +47,7 @@ gulp.task('watchify', () => {
       .bundle()
       .on('error', notify.onError())
       .pipe(source(paths.bundle))
-      .pipe(gulp.dest(paths.distJs))
+      .pipe(gulp.dest(paths.destJs))
       .pipe(reload({stream: true}));
   }
 
@@ -65,7 +65,7 @@ gulp.task('browserify', () => {
   .pipe(sourcemaps.init())
   .pipe(uglify())
   .pipe(sourcemaps.write('.'))
-  .pipe(gulp.dest(paths.distJs));
+  .pipe(gulp.dest(paths.destJs));
 });
 
 gulp.task('styles', () => {
@@ -73,19 +73,19 @@ gulp.task('styles', () => {
     .pipe(stylus({
       use: nib()
     }))
-    .pipe(gulp.dest(paths.dist));
+    .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task('htmlReplace', () => {
-  gulp.src('index.html')
+  gulp.src('./public/index.html')
   .pipe(htmlReplace({css: 'styles/main.css', js: 'js/app.js'}))
-  .pipe(gulp.dest(paths.dist));
+  .pipe(gulp.dest(paths.dest));
 });
 
 gulp.task('images', () => {
   gulp.src(paths.srcImg)
   .pipe(imagemin())
-  .pipe(gulp.dest(paths.distImg));
+  .pipe(gulp.dest(paths.destImg));
 });
 
 gulp.task('lint', () => {
