@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "deploy-to-staging": "gulp build && publisssh --dry-run ./public preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
-    "deploy-to-production": "gulp build && publisssh --dry-run ./public zooniverse-static/usa-wildlife-watch-team && gulp clean",
+    "deploy-to-staging": "gulp build && publisssh ./public preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
+    "deploy-to-production": "gulp build && publisssh ./public zooniverse-static/usa-wildlife-watch-team && gulp clean",
     "deploy": "npm run deploy-to-staging && npm run deploy-to-production"
   },
   "author": "",
