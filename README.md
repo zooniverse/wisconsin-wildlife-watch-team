@@ -1,4 +1,4 @@
-#USA Wildlife Watch Team Page
+#Wisconsin Wildlife Watch Team Page
 
 __Install the dependencies:__
 

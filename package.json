@@ -1,7 +1,7 @@
 {
-  "name": "usa-wildlife-watch-team",
+  "name": "wi-wildlife-watch-team",
   "version": "1.0.0",
-  "description": "Team-Organization-Image_Source Page for USA Wildlife Watch",
+  "description": "Team-Organization-Image_Source Page for Wisconsin Wildlife Watch",
   "main": "app.js",
   "repository": {
     "type": "",
@@ -9,8 +9,8 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "deploy-to-staging": "gulp build && publisssh ./public preview.zooniverse.org/usa-wildlife-watch-team && gulp clean",
-    "deploy-to-production": "gulp build && publisssh ./public zooniverse-static/usa-wildlife-watch-team && gulp clean",
+    "deploy-to-staging": "gulp build && publisssh ./public demo.zooniverse.org/wi-wildlife-watch-team && gulp clean",
+    "deploy-to-production": "gulp build && publisssh ./public zooniverse-static/wi-wildlife-watch-team && gulp clean",
     "deploy": "npm run deploy-to-staging && npm run deploy-to-production"
   },
   "author": "",
